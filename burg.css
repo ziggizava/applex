@@ -18,7 +18,7 @@ main {
 
 
 .header {
-    position: fixed; /* Закрепляем блок в верхней части */
+     /* Закрепляем блок в верхней части */
     top: 0;
     width: 97%;
     background-color: #fff;
@@ -27,6 +27,8 @@ main {
     z-index: 1000; /* Устанавливаем высокий z-index, чтобы блок был поверх других элементов */
     border: 2px solid #ccc;
     border-radius: 20px; /* Закругленные углы для карточек */
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 .navbar {
@@ -62,6 +64,9 @@ main {
     color: #000;
     text-decoration: none;
     font-weight: bold;
+    border: 1px solid #000; /* Добавляет границу */
+    padding: 5px 10px; /* Добавляет внутренний отступ для кнопок */
+    border-radius: 5px; /* Скругляет углы */
 }
 
 .phone-link {
@@ -157,6 +162,8 @@ a {
 
 
 .silk_menu {
+
+    z-index: 1000;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -203,7 +210,7 @@ a {
 }
 
 .container {
-    max-width: 500px;
+    max-width: 95%;
     border: 2px solid #ddd;
     height: 1330px;
     border-radius: 40px;
@@ -212,7 +219,7 @@ a {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px 0;
     margin-top: 50px;
-    margin-left: 0px;
+    margin-left: 50px;
     padding-top: 45px;
 }
 
@@ -325,7 +332,7 @@ a {
 
 /* Стили для контейнера пиццы */
 .pizza-container {
-    max-width: 500px;
+    max-width: 95%;
     border: 2px solid #ddd;
     height: 1080px;
     border-radius: 40px;
@@ -334,7 +341,7 @@ a {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px 0;
     margin-top: 70px;
-    margin-left: 0px;
+    margin-left: 50px;
     padding-top: 45px;
 }
 
@@ -399,7 +406,7 @@ a {
 
 
 .lavash-container {
-    max-width: 500px;
+    max-width: 95%;
     border: 2px solid #ddd;
     height: 1100px;
     border-radius: 40px;
@@ -408,7 +415,7 @@ a {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px 0;
     margin-top: 70px;
-    margin-left: 0px;
+    margin-left: 50px;
     padding-top: 45px;
 }
 
@@ -442,7 +449,7 @@ a {
 
 
 .sushi-container {
-    max-width: 500px;
+    max-width: 95%;
     border: 2px solid #ddd;
     height: 1100px;
     border-radius: 40px;
@@ -451,7 +458,7 @@ a {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px 0;
     margin-top: 70px;
-    margin-left: 0px;
+    margin-left: 50px;
     padding-top: 45px;
 }
 
@@ -481,7 +488,7 @@ a {
 }
 
 .zakus-container {
-    max-width: 500px;
+    max-width: 95%;
     border: 2px solid #ddd;
     height: 1100px;
     border-radius: 40px;
@@ -490,7 +497,7 @@ a {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px 0;
     margin-top: 70px;
-    margin-left: 0px;
+    margin-left: 50px;
     padding-top: 45px;
 }
 
@@ -508,7 +515,7 @@ a {
     grid-template-rows: 250px 250px 22% 22%;
 }
 
-.imgzakus {
+.imgzakuski {
     margin: 10px 0;
     width: 90px;
     height: auto;
@@ -518,3 +525,154 @@ a {
 #osoby_zakus, #osoby_zakus2 {
     margin-top: 35px;
 }
+
+.sweet-container {
+    max-width: 95%;
+    border: 2px solid #ddd;
+    height: 1100px;
+    border-radius: 40px;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    margin-top: 70px;
+    margin-left: 50px;
+    padding-top: 45px;
+}
+
+#textsweet {
+    text-align: center; /* Выравнивание текста по центру */
+    margin-top: 0; /* Убираем верхний отступ у заголовка */
+    height: 50px;
+   border-bottom: 1px solid #ddd;
+   }
+
+
+.sweet-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px 22% 22%;
+}
+
+.imgsweet {
+    margin: 10px 0;
+    width: 90px;
+    height: auto;
+}
+
+
+#osoby_sweet, #osoby_sweet2 {
+    margin-top: 35px;
+}
+
+
+.hdrinks-container {
+    max-width: 95%;
+    border: 2px solid #ddd;
+    height: 1100px;
+    border-radius: 40px;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    margin-top: 70px;
+    margin-left: 50px;
+    padding-top: 45px;
+}
+
+#texthdrinks {
+    text-align: center; /* Выравнивание текста по центру */
+    margin-top: 0; /* Убираем верхний отступ у заголовка */
+    height: 50px;
+   border-bottom: 1px solid #ddd;
+   }
+
+
+.hdrinks-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px 22% 22%;
+}
+
+.imghdrinks {
+    margin: 10px 0;
+    width: 90px;
+    height: auto;
+}
+
+
+#osoby_hdrinks, #osoby_hdrinks2 {
+    margin-top: 35px;
+}
+
+#osoby_photohd, #osoby_photohd2{
+    margin: 10px 0;
+    width: 90px;
+    height: 100px;
+}
+
+
+
+.cdrinks-container {
+    max-width: 95%;
+    border: 2px solid #ddd;
+    height: 1100px;
+    border-radius: 40px;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    margin-top: 70px;
+    margin-left: 50px;
+    padding-top: 45px;
+}
+
+#textcdrinks {
+    text-align: center; /* Выравнивание текста по центру */
+    margin-top: 0; /* Убираем верхний отступ у заголовка */
+    height: 50px;
+   border-bottom: 1px solid #ddd;
+   }
+
+
+.cdrinks-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px 22% 22%;
+}
+
+.imgcdrinks {
+    margin: 10px 0;
+    width: 90px;
+    height: auto;
+}
+
+
+#osoby_cdrinks, #osoby_cdrinks2 {
+    margin-top: 35px;
+}
+
+#osoby_photocd, #osoby_photocd2, #osoby_photocd3 {
+    margin: 10px 0;
+    width: 90px;
+    height: 100px;
+}
+
+#osoby_photocd5{
+    margin: 10px 0;
+    width: 90px;
+    height: 85px;
+}
+
+#osoby_photocd4{
+    margin: 10px 0;
+    width: 90px;
+    height: 100px;
+}
+#osoby_photocd6{
+    margin: 10px 0;
+    width: 90px;
+    height: 100px;
+}
+
+
