@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APEX PIZZA</title>
+    <link rel="stylesheet" href="burg.css">
+    <link rel="stylesheet" href="forphn.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.jpeg" alt="apex logo">
+                <span>APEX <br> PIZZA</span>
+            </div>
+            <nav class="menu">
+                <a href="#menu" class="nav-link">Меню</a>
+                <a href="#news" class="nav-link">Новости</a>
+                <a href="#restaurants" class="nav-link">Рестораны</a>
+                <a href="#stocks" class="nav-link">Акции</a>
+            </nav>
+            <a href="tel:1089" class="phone-link">
+                <img src="phone.jpg" alt="Phone Icon">
+                <span>1089</span>
+            </a>
+        </div>
+    </header>
+    <main>
+
+
+
+       <!--  слайдер    -->
+
+<div id="slider">
+    <ul>
+        <li><a href="ссылка_1"><img src="slidebur1.jpg" alt="Burger 1"></a></li>
+        <li><a href="ссылка_1"><img src="slidebur2.jpg" alt="Burger 2"></a></li>
+        <li><a href="ссылка_1"><img src="slidebur3.jpg" alt="Burger 3"></a></li>
+    </ul>
+    <div id="prev">&lt;</div>
+    <div id="next">&gt;</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var slideCount = $('#slider ul li').length;
+        var slideWidth = $('#slider ul li').width();
+        var slideHeight = $('#slider ul li').height();
+        var sliderUlWidth = slideCount * slideWidth;
+
+        $('#slider').css({ width: slideWidth, height: slideHeight });
+
+        $('#slider ul').css({ width: sliderUlWidth, marginLeft: -slideWidth });
+
+        $('#slider ul li:last-child').prependTo('#slider ul');
+
+        function moveLeft() {
+            $('#slider ul').animate({
+                left: +slideWidth
+            }, 200, function () {
+                $('#slider ul li:last-child').prependTo('#slider ul');
+                $('#slider ul').css('left', '');
+            });
+        }
+
+        function moveRight() {
+            $('#slider ul').animate({
+                left: -slideWidth
+            }, 200, function () {
+                $('#slider ul li:first-child').appendTo('#slider ul');
+                $('#slider ul').css('left', '');
+            });
+        }
+
+        $('#prev').click(function () {
+            moveLeft();
+        });
+
+        $('#next').click(function () {
+            moveRight();
+        });
+    });
+</script>
+
+
+
+<div class="silk_menu">
+        <a href="" class="silk_eda">
+            <img src="eda1.png" alt="Eda 1">
+            <p>БУРГЕРЫ</p>
+        </a>
+        <a href="" class="silk_eda">
+            <img src="eda2.png" alt="Eda 2">
+            <p>ПИЦЦЫ</p>
+        </a>
+        <a href="" class="silk_eda">
+            <img src="eda3.png" alt="Eda 3">
+            <p>ЛАВАШЫ</p>
+        </a>
+        <a href="" class="silk_eda">
+            <img src="eda4.jpg" alt="Eda 4">
+            <p>СУШИ</p>
+        </a>
+        <a href="" class="silk_eda">
+            <img src="eda5.avif" alt="Eda 5">
+            <p>ЗАКУСКИ</p>
+        </a>
+        <a href="" class="silk_eda">
+            <img src="eda6.jpg" alt="Eda 6">
+            <p>СЛАДОСТИ</p>
+        </a>
+        <a href="" class="silk_eda">
+            <img src="eda7.jpg" alt="Eda 7">
+            <p>ГОРЯЧИЕ НАПИТКИ</p>
+        </a>
+        <a href="" class="silk_eda">
+            <img src="eda8.avif" alt="Eda 8">
+            <p>ХОЛОДНЫЕ НАПИТКИ</p>
+        </a>
+    </div>
+
+        <!-- меню бургеров -->
+
+
+<div class="container">
+        <h1 id="textbur">Б У Р Г Е Р Ы</h1>
+    <div class="inner">
+        <div class="item">
+            <img src="votburger.png" alt="Burger" class="imgbur">
+            <p>Burger - $4.99</p>
+            <button class="btn" id="btn1">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="burger_2.png" alt="Burger" class="imgbur">
+            <p>Burger - $6.50</p>
+            <button class="btn" id="btn2">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="burger_3.jpg" alt="Burger" class="imgbur">
+            <p>Burger - $5.79</p>
+            <button class="btn" id="btn3">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="burger_4.jpg" alt="Burger" class="imgbur">
+            <p id="osoby_p">Burger - $8.0</p>
+            <button class="btn" id="btn4">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="burger_5.jpg" alt="Burger" class="imgbur">
+            <p>Burger - $4.0</p>
+            <button class="btn" id="btn5">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="burger_6.jpg" alt="Burger" class="imgbur" id="osoby_foto">
+            <p id="osoby_p2">Burger - $10.0</p>
+            <button class="btn" id="btn6">В корзину</button>
+        </div>
+        <div class="item" id="osoby_burger">
+            <img src="votburger.png" alt="Burger" class="imgbur">
+            <p>Burger - $?</p>
+            <button class="btn" id="btn7">В корзину</button>
+        </div>
+        <div class="item" id="osoby_burger2">
+            <img src="votburger.png" alt="Burger" class="imgbur">
+            <p>Burger - $15.5</p>
+            <button class="btn" id="btn8">В корзину</button>
+        </div>
+        <div class="item" id="osoby_burger3">
+            <img src="votburger.png" alt="Burger" class="imgbur">
+            <p>Burger - $9.9</p>
+            <button class="btn" id="btn9">В корзину</button>
+        </div>
+        <div class="item" id="osoby_burger4">
+            <img src="votburger.png" alt="Burger" class="imgbur">
+            <p>Burger - $6.5</p>
+            <button class="btn" id="btn10">В корзину</button>
+        </div>
+    </div>
+</div>
+<div class="usercard" id="usercard"></div>
+
+
+
+<!-- Меню пиццы -->
+<div class="pizza-container">
+    <h2 id="textpizza">П И Ц Ц Ы</h2>
+    <div class="inner">
+
+        <div class="item">
+            <img src="pizza1.jpg" alt="Pizza" class="imgpiz">
+            <p>Pizza - $8.99</p>
+            <button class="btn" id="btnpiz1">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="pizza2.jpg" alt="Pizza" class="imgpiz">
+            <p class="osoby_textpiz">Pizza - $12.50</p>
+            <button class="btn" id="btnpiz2">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="pizza1.jpg" alt="Pizza" class="imgpiz">
+            <p>Pizza - $7.0</p>
+            <button class="btn" id="btnpiz3">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="pizza2.jpg" alt="Pizza" class="imgpiz">
+            <p class="osoby_textpiz">Pizza - $25.0</p>
+            <button class="btn" id="btnpiz4">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="pizza1.jpg" alt="Pizza" class="imgpiz">
+            <p>Pizza - $20.99</p>
+            <button class="btn" id="btnpiz5">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="pizza2.jpg" alt="Pizza" class="imgpiz">
+            <p class="osoby_textpiz">Pizza - $15.30</p>
+            <button class="btn" id="btnpiz6">В корзину</button>
+        </div>
+        <div class="item" id="osoby_pizza">
+            <img src="pizza1.jpg" alt="Pizza" class="imgpiz">
+            <p>Pizza - $6.90</p>
+            <button class="btn" id="btnpiz7">В корзину</button>
+        </div>
+        <div class="item" id="osoby_pizza2">
+            <img src="pizza2.jpg" alt="Pizza" class="imgpiz">
+            <p class="osoby_textpiz">Pizza - $9.99</p>
+            <button class="btn" id="btnpiz8">В корзину</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="lavash-container">
+    <h2 id="textlavash">П И Ц Ц Ы</h2>
+    <div class="lavash-inner">
+
+        <div class="item">
+            <img src="lavash1.jpg" alt="Lavash" class="imgpiz">
+            <p>Lavash - $8.99</p>
+            <button class="btn" id="lavash1">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="lavash2.jpg" alt="Lavash" class="imgpiz">
+            <p class="osoby_textpiz">Lavash - $12.50</p>
+            <button class="btn" id="lavash2">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="lavash3.jpeg" alt="Lavash" class="imgpiz">
+            <p>Lavash - $7.0</p>
+            <button class="btn" id="lavash3">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="lavash4.jpg" alt="Lavash" class="imgpiz">
+            <p class="osoby_textpiz">Lavash - $25.0</p>
+            <button class="btn" id="lavash4">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="lavash5.jpg" alt="Lavash" class="imgpiz">
+            <p>Lavash - $20.99</p>
+            <button class="btn" id="lavash5">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="lavash6.jpg" alt="Lavash" class="imgpiz">
+            <p class="osoby_textpiz">Lavash - $15.30</p>
+            <button class="btn" id="lavash6">В корзину</button>
+        </div>
+        <div class="item" id="osoby_lavash2">
+            <img src="lavash7.jpg" alt="Lavash" class="imgpiz">
+            <p>Lavash - $6.90</p>
+            <button class="btn" id="lavash7">В корзину</button>
+        </div>
+        <div class="item" id="osoby_lavash">
+            <img src="lavash8.jpg" alt="Lavash" class="imgpiz">
+            <p class="osoby_textpiz">Lavash - $9.99</p>
+            <button class="btn" id="lavash8">В корзину</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="sushi-container">
+    <h2 id="textsushi">С У Ш Ы</h2>
+    <div class="sushi-inner">
+
+        <div class="item">
+            <img src="sushi1.jpg" alt="Sushi" class="imgsushi">
+            <p>Sushi - $8.99</p>
+            <button class="btn" id="sushi1">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="sushi2.jpg" alt="Sushi" class="imgsushi">
+            <p class="osoby_textpiz">Sushi - $12.50</p>
+            <button class="btn" id="sushi2">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="sushi3.jpg" alt="Sushi" class="imgsushi">
+            <p>Sushi - $7.0</p>
+            <button class="btn" id="sushi3">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="sushi4.jpg" alt="Sushi" class="imgsushi">
+            <p class="osoby_textpiz">Sushi - $25.0</p>
+            <button class="btn" id="sushi4">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="sushi5.jpg" alt="Sushi" class="imgsushi">
+            <p>Sushi - $20.99</p>
+            <button class="btn" id="sushi5">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="sushi6.jpg" alt="Sushi" class="imgsushi">
+            <p class="osoby_textpiz">Sushi - $15.30</p>
+            <button class="btn" id="sushi6">В корзину</button>
+        </div>
+        <div class="item" id="osoby_sushi">
+            <img src="sushi7.jpg" alt="Sushi" class="imgsushi">
+            <p>Sushi - $6.90</p>
+            <button class="btn" id="sushi7">В корзину</button>
+        </div>
+        <div class="item" id="osoby_sushi2">
+            <img src="sushi8.jpg" alt="Sushi" class="imgsushi">
+            <p class="osoby_textpiz">Sushi - $9.99</p>
+            <button class="btn" id="sushi8">В корзину</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="zakus-container">
+    <h2 id="textzakus">ЗАКУСКИ</h2>
+    <div class="zakus-inner">
+
+        <div class="item">
+            <img src="zakus1.jpg" alt="Закуски" class="zakuski">
+            <p>Zakus - $8.99</p>
+            <button class="btn" id="zakus1">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="zakus2.jpg" alt="Закуски" class="zakuski">
+            <p class="">Zakus - $12.50</p>
+            <button class="btn" id="zakus2">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="zakus3.jpg" alt="Закуски" class="zakuski">
+            <p>Zakus - $7.0</p>
+            <button class="btn" id="zakus3">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="zakus4.jpg" alt="Закуски" class="zakuski">
+            <p class="">Zakus - $25.0</p>
+            <button class="btn" id="zakus4">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="zakus5.jpg" alt="Закуски" class="zakuski">
+            <p>Zakus - $20.99</p>
+            <button class="btn" id="zakus5">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="zakus6.jpg" alt="Закуски" class="zakuski">
+            <p class="">Zakus - $15.30</p>
+            <button class="btn" id="zakus6">В корзину</button>
+        </div>
+        <div class="item" id="osoby_zakus">
+            <img src="zakus7.jpg" alt="Закуски" class="zakuski">
+            <p>Zakus - $6.90</p>
+            <button class="btn" id="zakus7">В корзину</button>
+        </div>
+        <div class="item" id="osoby_zakus2">
+            <img src="zakus8.jpg" alt="Закуски" class="zakuski">
+            <p class="">Zakus - $9.99</p>
+            <button class="btn" id="zakus8">В корзину</button>
+        </div>
+    </div>
+</div>
+
+
+        <script src="https://telegram.org/js/telegram-web-app.js"></script>
+        <script src="votjs.js"></script>
+
+
+    </main>
+</body>
+</html>
+
+
+
+
+
+<!--<div class="">-->
+<!--    <h2 id=""></h2>-->
+<!--    <div class="-inner">-->
+
+<!--        <div class="item">-->
+<!--            <img src="1.jpg" alt="" class="">-->
+<!--            <p> - $8.99</p>-->
+<!--            <button class="btn" id="">В корзину</button>-->
+<!--        </div>-->
+<!--        <div class="item">-->
+<!--            <img src="2.jpg" alt="" class="">-->
+<!--            <p class=""> - $12.50</p>-->
+<!--            <button class="btn" id="">В корзину</button>-->
+<!--        </div>-->
+<!--        <div class="item">-->
+<!--            <img src="3.jpg" alt="" class="">-->
+<!--            <p> - $7.0</p>-->
+<!--            <button class="btn" id="">В корзину</button>-->
+<!--        </div>-->
+<!--        <div class="item">-->
+<!--            <img src="4.jpg" alt="" class="">-->
+<!--            <p class=""> - $25.0</p>-->
+<!--            <button class="btn" id="">В корзину</button>-->
+<!--        </div>-->
+<!--        <div class="item">-->
+<!--            <img src="5.jpg" alt="" class="">-->
+<!--            <p> - $20.99</p>-->
+<!--            <button class="btn" id="">В корзину</button>-->
+<!--        </div>-->
+<!--        <div class="item">-->
+<!--            <img src="6.jpg" alt="" class="">-->
+<!--            <p class=""> - $15.30</p>-->
+<!--            <button class="btn" id="">В корзину</button>-->
+<!--        </div>-->
+<!--        <div class="item" id="">-->
+<!--            <img src="7.jpg" alt="" class="">-->
+<!--            <p> - $6.90</p>-->
+<!--            <button class="btn" id="">В корзину</button>-->
+<!--        </div>-->
+<!--        <div class="item" id="">-->
+<!--            <img src="8.jpg" alt="" class="">-->
+<!--            <p class=""> - $9.99</p>-->
+<!--            <button class="btn" id="">В корзину</button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+

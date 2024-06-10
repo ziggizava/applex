@@ -1,0 +1,28 @@
+@media only screen and (max-width: 600px) {
+
+    .header {
+    position: fixed; /* Закрепляем блок в верхней части */
+    top: 0;
+    width: 25%;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+    }
+
+    .container {
+    max-width: 500px;
+    border: 2px solid #ddd;
+    height: 1220px;
+    border-radius: 40px;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    margin-top: 70px;
+    margin-left: 0px;
+    padding-top: 45px;
+    }
+
+
+}

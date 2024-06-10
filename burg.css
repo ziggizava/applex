@@ -1,0 +1,520 @@
+
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 18px;
+    color: var(--tg--theme-text-color);
+    background: var(--tg--theme-bg-color);
+    font-family: Arial, sans-serif;
+    align-items: center;
+    width: 100%;
+}
+
+main {
+    min-height: 100vh; /* Задает минимальную высоту для основного содержимого */
+    padding-bottom: 120px; /* Добавляем нижний отступ для создания пространства */
+}
+
+
+.header {
+    position: fixed; /* Закрепляем блок в верхней части */
+    top: 0;
+    width: 97%;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000; /* Устанавливаем высокий z-index, чтобы блок был поверх других элементов */
+    border: 2px solid #ccc;
+    border-radius: 20px; /* Закругленные углы для карточек */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    font-size: 14px
+
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+
+.menu {
+    display: flex;
+    gap: 100px;
+    font-size: 18px;
+    padding-left: 0px;
+
+
+}
+
+
+.nav-link {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.phone-link {
+    display: flex;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.phone-link img {
+    height: 25px;
+    margin-right: 5px;
+
+}
+
+main {
+    padding-top: 60px; /* Отступ сверху для основного контента, чтобы он не перекрывался хедером */
+}
+
+
+
+/* Стили для слайдера */
+#slider-container {
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+}
+#slider {
+    max-width: 98%;
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px; /* Добавим отступ сверху */
+    margin-left: 20px;
+}
+#slider ul {
+    width: 300%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition: left 0.5s;
+}
+#slider ul li {
+    width: 33.33%;
+    height: 100%;
+    float: left;
+    display: block;
+}
+#slider ul li img {
+    width: 100%;
+    height: auto;
+}
+
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    padding: 30px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 200px;
+    transition: background-color 0.3s;
+}
+
+#prev:hover, #next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#prev {
+    left: -10px; /* Поместим стрелку prev слева от слайдера */
+}
+
+#next {
+    right: -10px; /* Поместим стрелку next справа от слайдера */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.#slider a {
+    /* Ваши стили здесь */
+    text-decoration: none;
+    /* Другие стили */
+}
+
+
+.silk_menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    margin-top: 50px;
+}
+
+.silk_eda {
+    width: 150px;
+    height: 220px; /* Увеличиваем высоту, чтобы учесть текст */
+    margin: 15px;
+    border: 2px solid #ccc;
+    border-radius: 20px; /* Закругленные углы для карточек */
+    display: flex;
+    flex-direction: column; /* Располагаем элементы вертикально */
+    justify-content: flex-start; /* Начинаем располагать элементы сверху */
+    align-items: center;
+    overflow: hidden;
+    text-decoration: none; /* Убирает подчеркивание ссылок */
+    background-color: #fff; /* Фон карточек */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Добавляем тень для карточек */
+    transition: transform 0.2s; /* Анимация для карточек при наведении */
+}
+
+.silk_eda:hover {
+    transform: scale(1.05); /* Увеличение карточки при наведении */
+}
+
+.silk_eda img {
+    width: 100%;
+    height: 150px; /* Устанавливаем фиксированную высоту для изображений */
+    object-fit: cover;
+}
+
+.silk_eda p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 500px;
+    border: 2px solid #ddd;
+    height: 1330px;
+    border-radius: 40px;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    margin-top: 50px;
+    margin-left: 0px;
+    padding-top: 45px;
+}
+
+#osoby_burger, #osoby_burger2{
+    margin-top: -6px;
+}
+
+#osoby_burger3, #osoby_burger4{
+    margin-top: -25px;
+}
+
+#textbur {
+    text-align: center;
+    margin-top: 0;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+}
+
+.inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px 22% 22%;
+}
+
+.imgbur {
+    margin: 10px 0;
+    width: 90px;
+    height: auto;
+}
+
+.item {
+    text-align: center;
+    margin: 15px; /* Уменьшаем внешний отступ */
+    width: 200px; /* Уменьшаем ширину карточки */
+    height: 230px; /* Уменьшаем высоту карточки */
+    border: 2px solid #ccc;
+    border-radius: 15px; /* Закругленные углы */
+    overflow: hidden;
+    background-color: #fff; /* Фон карточки */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для карточки */
+    transition: transform 0.2s; /* Анимация при наведении */
+}
+
+.item:hover {
+    transform: scale(1.05); /* Увеличение карточки при наведении */
+}
+
+.item img {
+    width: 50%;
+    height: auto;
+    border-bottom: 2px solid #ccc; /* Добавляем разделительную линию под изображением */
+}
+
+.item p {
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background: rgb(248, 168, 24);
+    border-radius: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background 0.2s linear;
+    cursor: pointer
+}
+
+.btn:hover {
+    background: lightgreen;
+}
+
+.usercard {
+    text-align: center;
+}
+
+
+
+#osoby_p {
+    transform:translateY(7px)
+}
+
+#btn4 {
+    transform:translateY(7px)
+}
+
+
+#btn6 {
+    transform:translateY(-25px)
+}
+
+#osoby_p2 {
+    transform:translateY(-25px)
+}
+
+#osoby_foto {
+    transform:translateY(-15px)
+}
+
+
+
+
+/* Стили для контейнера пиццы */
+.pizza-container {
+    max-width: 500px;
+    border: 2px solid #ddd;
+    height: 1080px;
+    border-radius: 40px;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    margin-top: 70px;
+    margin-left: 0px;
+    padding-top: 45px;
+}
+
+#osoby_pizza, #osoby_pizza2{
+    margin-top: 35px;
+}
+
+#textpizza {
+    text-align: center; /* Выравнивание текста по центру */
+    margin-top: 0; /* Убираем верхний отступ у заголовка */
+    height: 50px;
+   border-bottom: 1px solid #ddd;
+   }
+
+
+.inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px 22% 22%;
+}
+
+.imgpiz {
+    margin: 10px 0;
+    width: 90px;
+    height: auto;
+}
+
+.item {
+    text-align: center;
+
+
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    background: rgb(248, 168, 24);
+    border-radius: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background 0.2s linear;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: lightgreen;
+}
+
+.usercard {
+    text-align: center;
+}
+
+#btnpiz2, #btnpiz4, #btnpiz6, #btnpiz8 {
+    margin-top: 12px
+}
+
+.osoby_textpiz {
+    transform: translateY(11px);
+}
+
+
+.lavash-container {
+    max-width: 500px;
+    border: 2px solid #ddd;
+    height: 1100px;
+    border-radius: 40px;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    margin-top: 70px;
+    margin-left: 0px;
+    padding-top: 45px;
+}
+
+#textlavash {
+    text-align: center; /* Выравнивание текста по центру */
+    margin-top: 0; /* Убираем верхний отступ у заголовка */
+    height: 50px;
+   border-bottom: 1px solid #ddd;
+   }
+
+
+.lavash-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px 22% 22%;
+}
+
+.imglavash {
+    margin: 10px 0;
+    width: 90px;
+    height: auto;
+}
+
+.item {
+    text-align: center;
+}
+
+#osoby_lavash, #osoby_lavash2 {
+    margin-top: 35px;
+}
+
+
+.sushi-container {
+    max-width: 500px;
+    border: 2px solid #ddd;
+    height: 1100px;
+    border-radius: 40px;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    margin-top: 70px;
+    margin-left: 0px;
+    padding-top: 45px;
+}
+
+#textsushi {
+    text-align: center; /* Выравнивание текста по центру */
+    margin-top: 0; /* Убираем верхний отступ у заголовка */
+    height: 50px;
+   border-bottom: 1px solid #ddd;
+   }
+
+
+.sushi-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px 22% 22%;
+}
+
+.imgsushi {
+    margin: 10px 0;
+    width: 90px;
+    height: auto;
+}
+
+
+#osoby_sushi, #osoby_sushi2 {
+    margin-top: 35px;
+}
+
+.zakus-container {
+    max-width: 500px;
+    border: 2px solid #ddd;
+    height: 1100px;
+    border-radius: 40px;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    margin-top: 70px;
+    margin-left: 0px;
+    padding-top: 45px;
+}
+
+#textzakus {
+    text-align: center; /* Выравнивание текста по центру */
+    margin-top: 0; /* Убираем верхний отступ у заголовка */
+    height: 50px;
+   border-bottom: 1px solid #ddd;
+   }
+
+
+.zakus-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px 22% 22%;
+}
+
+.imgzakus {
+    margin: 10px 0;
+    width: 90px;
+    height: auto;
+}
+
+
+#osoby_zakus, #osoby_zakus2 {
+    margin-top: 35px;
+}
