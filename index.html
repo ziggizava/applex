@@ -17,7 +17,7 @@
             </div>
             <nav class="menu">
                 <a href="#menu" class="nav-link">Меню</a>
-                <a href="#news" class="nav-link">Новости</a>
+                <a href="news.html" class="nav-link">Новости</a>
                 <a href="#restaurants" class="nav-link">Рестораны</a>
                 <a href="#stocks" class="nav-link">Акции</a>
             </nav>
@@ -27,11 +27,11 @@
             </a>
         </div>
     </header>
+
+
     <main>
 
 
-
-       <!--  слайдер    -->
 
 <div id="slider">
     <ul>
@@ -89,44 +89,65 @@
 
 
 <div class="silk_menu">
-        <a href="" class="silk_eda">
+        <a href="#burgers" class="silk_eda">
             <img src="eda1.png" alt="Eda 1">
             <p>БУРГЕРЫ</p>
         </a>
-        <a href="" class="silk_eda">
+        <a href="#pizzas" class="silk_eda">
             <img src="eda2.png" alt="Eda 2">
             <p>ПИЦЦЫ</p>
         </a>
-        <a href="" class="silk_eda">
+        <a href="#lavashes" class="silk_eda">
             <img src="eda3.png" alt="Eda 3">
             <p>ЛАВАШЫ</p>
         </a>
-        <a href="" class="silk_eda">
+        <a href="#sushies" class="silk_eda">
             <img src="eda4.jpg" alt="Eda 4">
             <p>СУШИ</p>
         </a>
-        <a href="" class="silk_eda">
+        <a href="#snaks" class="silk_eda">
             <img src="eda5.avif" alt="Eda 5">
             <p>ЗАКУСКИ</p>
         </a>
-        <a href="" class="silk_eda">
+        <a href="#sweets" class="silk_eda">
             <img src="eda6.jpg" alt="Eda 6">
             <p>СЛАДОСТИ</p>
         </a>
-        <a href="" class="silk_eda">
+        <a href="#hdrinks" class="silk_eda">
             <img src="eda7.jpg" alt="Eda 7">
             <p>ГОРЯЧИЕ НАПИТКИ</p>
         </a>
-        <a href="" class="silk_eda">
+        <a href="#cold_drinks" class="silk_eda">
             <img src="eda8.avif" alt="Eda 8">
             <p>ХОЛОДНЫЕ НАПИТКИ</p>
         </a>
     </div>
 
+<script>
+    document.querySelectorAll('.silk_eda').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+
+
+
+
         <!-- меню бургеров -->
 
 
-<div class="container">
+<div id="burgers" class="container">
         <h1 id="textbur">Б У Р Г Е Р Ы</h1>
     <div class="inner">
         <div class="item">
@@ -186,7 +207,7 @@
 
 
 <!-- Меню пиццы -->
-<div class="pizza-container">
+<div id="pizzas" class="pizza-container">
     <h2 id="textpizza">П И Ц Ц Ы</h2>
     <div class="inner">
 
@@ -235,7 +256,7 @@
 
 
 
-<div class="lavash-container">
+<div id="lavashes" class="lavash-container">
     <h2 id="textlavash">П И Ц Ц Ы</h2>
     <div class="lavash-inner">
 
@@ -283,7 +304,7 @@
 </div>
 
 
-<div class="sushi-container">
+<div id="sushies" class="sushi-container">
     <h2 id="textsushi">С У Ш Ы</h2>
     <div class="sushi-inner">
 
@@ -332,53 +353,200 @@
 
 
 
-<div class="zakus-container">
-    <h2 id="textzakus">ЗАКУСКИ</h2>
+<div id="snaks" class="zakus-container">
+    <h2 id="textzakus">З А К У С К И</h2>
     <div class="zakus-inner">
 
         <div class="item">
-            <img src="zakus1.jpg" alt="Закуски" class="zakuski">
+            <img src="zakus1.jpg" alt="Закуски" class="imgzakuski">
             <p>Zakus - $8.99</p>
             <button class="btn" id="zakus1">В корзину</button>
         </div>
         <div class="item">
-            <img src="zakus2.jpg" alt="Закуски" class="zakuski">
+            <img src="zakus2.jpg" alt="Закуски" class="imgzakuski">
             <p class="">Zakus - $12.50</p>
             <button class="btn" id="zakus2">В корзину</button>
         </div>
         <div class="item">
-            <img src="zakus3.jpg" alt="Закуски" class="zakuski">
+            <img src="zakus3.jpg" alt="Закуски" class="imgzakuski">
             <p>Zakus - $7.0</p>
             <button class="btn" id="zakus3">В корзину</button>
         </div>
         <div class="item">
-            <img src="zakus4.jpg" alt="Закуски" class="zakuski">
+            <img src="zakus4.jpg" alt="Закуски" class="imgzakuski">
             <p class="">Zakus - $25.0</p>
             <button class="btn" id="zakus4">В корзину</button>
         </div>
         <div class="item">
-            <img src="zakus5.jpg" alt="Закуски" class="zakuski">
+            <img src="zakus5.jpg" alt="Закуски" class="imgzakuski">
             <p>Zakus - $20.99</p>
             <button class="btn" id="zakus5">В корзину</button>
         </div>
         <div class="item">
-            <img src="zakus6.jpg" alt="Закуски" class="zakuski">
+            <img src="zakus6.jpg" alt="Закуски" class="imgzakuski">
             <p class="">Zakus - $15.30</p>
             <button class="btn" id="zakus6">В корзину</button>
         </div>
         <div class="item" id="osoby_zakus">
-            <img src="zakus7.jpg" alt="Закуски" class="zakuski">
+            <img src="zakus7.jpg" alt="Закуски" class="imgzakuski">
             <p>Zakus - $6.90</p>
             <button class="btn" id="zakus7">В корзину</button>
         </div>
         <div class="item" id="osoby_zakus2">
-            <img src="zakus8.jpg" alt="Закуски" class="zakuski">
+            <img src="zakus8.jpg" alt="Закуски" class="imgzakuski">
             <p class="">Zakus - $9.99</p>
             <button class="btn" id="zakus8">В корзину</button>
         </div>
     </div>
 </div>
 
+
+
+<div id="sweets" class="sweet-container">
+    <h2 id="textsweet">С Л А Д О С Т И</h2>
+    <div class="sweet-inner">
+
+        <div class="item">
+            <img src="sweet1.jpg" alt="Сладости" class="imgsweet">
+            <p>Sweet - $8.99</p>
+            <button class="btn" id="sweet1">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="sweet2.avif" alt="Сладости" class="imgsweet">
+            <p class="">Sweet - $12.50</p>
+            <button class="btn" id="sweet2">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="sweet3.avif" alt="Сладости" class="imgsweet">
+            <p>Sweet - $7.0</p>
+            <button class="btn" id="sweet3">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="sweet4.avif" alt="Сладости" class="imgsweet">
+            <p class="">Sweet - $25.0</p>
+            <button class="btn" id="sweet4">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="sweet5.jpg" alt="Сладости" class="imgsweet">
+            <p>Sweet - $20.99</p>
+            <button class="btn" id="sweet5">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="sweet6.jpg" alt="Сладости" class="imgsweet">
+            <p class="">Sweet - $15.30</p>
+            <button class="btn" id="sweet6">В корзину</button>
+        </div>
+        <div class="item" id="osoby_sweet">
+            <img src="sweet7.avif" alt="Сладости" class="imgsweet">
+            <p>Sweet - $6.90</p>
+            <button class="btn" id="sweet7">В корзину</button>
+        </div>
+        <div class="item" id="osoby_sweet2">
+            <img src="sweet8.jpg" alt="Сладости" class="imgsweet">
+            <p class="">Sweet - $9.99</p>
+            <button class="btn" id="sweet8">В корзину</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="hdrinks" class="hdrinks-container">
+    <h2 id="texthdrinks">ГОРЯЧИЕ НАПИТКИ</h2>
+    <div class="hdrinks-inner">
+
+        <div class="item">
+            <img src="hdrinks1.avif" alt="Сладости" class="imghdrinks">
+            <p>Sweet - $8.99</p>
+            <button class="btn" id="hdrinks1">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="hdrinks2.jpg" alt="Сладости" class="imghdrinks">
+            <p class="">Sweet - $12.50</p>
+            <button class="btn" id="hdrinks2">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="hdrinks3.avif" alt="Сладости" class="imghdrinks">
+            <p>Sweet - $7.0</p>
+            <button class="btn" id="hdrinks3">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="hdrinks4.avif" alt="Сладости" class="imghdrinks">
+            <p class="">Sweet - $25.0</p>
+            <button class="btn" id="hdrinks4">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="hdrinks5.avif" alt="Сладости" class="imghdrinks">
+            <p>Sweet - $20.99</p>
+            <button class="btn" id="hdrinks5">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="hdrinks6.jpg" alt="Сладости" class="imgsweet" id="osoby_photohd">
+            <p class="">Sweet - $15.30</p>
+            <button class="btn" id="hdrinks6">В корзину</button>
+        </div>
+        <div class="item" id="osoby_hdrinks">
+            <img src="hdrinks7.jpg" alt="Сладости" class="imghdrinks">
+            <p>Sweet - $6.90</p>
+            <button class="btn" id="hdrinks7">В корзину</button>
+        </div>
+        <div class="item" id="osoby_hdrinks2">
+            <img src="hdrinks8.jpg" alt="Сладости" class="imghdrinks" id="osoby_photohd2">
+            <p class="">Sweet - $9.99</p>
+            <button class="btn" id="hdrinks8">В корзину</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="cdrinks" class="cdrinks-container">
+    <h2 id="textcdrinks">ХОЛОДНЫЕ НАПИТКИ</h2>
+    <div class="hdrinks-inner">
+
+        <div class="item">
+            <img src="cdrinks1.avif" alt="Сладости" class="imgcdrinks" id="osoby_photocd">
+            <p>Sweet - $8.99</p>
+            <button class="btn" id="cdrinks1">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="cdrinks2.avif" alt="Сладости" class="imgcdrinks">
+            <p class="">Sweet - $12.50</p>
+            <button class="btn" id="cdrinks2">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="cdrinks3.jpg" alt="Сладости" class="imgcdrinks" id="osoby_photocd2">
+            <p>Sweet - $7.0</p>
+            <button class="btn" id="cdrinks3">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="cdrinks4.avif" alt="Сладости" class="imgcdrinks" id="osoby_photocd3">
+            <p class="">Sweet - $25.0</p>
+            <button class="btn" id="cdrinks4">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="cdrinks5.avif" alt="Сладости" class="imgcdrinks" id="osoby_photocd4">
+            <p>Sweet - $20.99</p>
+            <button class="btn" id="cdrinks5">В корзину</button>
+        </div>
+        <div class="item">
+            <img src="cdrinks6.avif" alt="Сладости" class="imgsweet">
+            <p class="">Sweet - $15.30</p>
+            <button class="btn" id="cdrinks6">В корзину</button>
+        </div>
+        <div class="item" id="osoby_cdrinks">
+            <img src="cdrinks7.avif" alt="Сладости" class="imgcdrinks" id="osoby_photocd5">
+            <p>Sweet - $6.90</p>
+            <button class="btn" id="cdrinks7">В корзину</button>
+        </div>
+        <div class="item" id="osoby_cdrinks2">
+            <img src="cdrinks8.avif" alt="Сладости" id="osoby_photocd6">
+            <p class="">Sweet - $9.99</p>
+            <button class="btn" id="cdrinks8">В корзину</button>
+        </div>
+    </div>
+</div>
 
         <script src="https://telegram.org/js/telegram-web-app.js"></script>
         <script src="votjs.js"></script>
